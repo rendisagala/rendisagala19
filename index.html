@@ -15,130 +15,109 @@
       crossorigin="anonymous"
     />
   </head>
-  <body>
+  <body
+    data-bs-spy="scroll"
+    data-bs-target="#navbar-example2"
+    data-bs-offset="0"
+    class="scrollspy-example"
+    tabindex="0"
+  >
     <!-- navbar -->
     <nav id="navbar-example2" class="navbar navbar-light fixed-top px-3">
       <a class="navbar-brand" href="#">Navbar</a>
       <ul class="nav nav-pills">
         <li class="nav-item">
-          <a class="nav-link" href="#scrollspyHeading1">First</a>
+          <a class="nav-link" href="#scrollspyHeading1">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#scrollspyHeading2">Second</a>
+          <a class="nav-link" href="#scrollspyHeading2">About</a>
         </li>
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            data-bs-toggle="dropdown"
-            href="#"
-            role="button"
-            aria-expanded="false"
-            >Dropdown</a
-          >
-          <ul class="dropdown-menu">
-            <li>
-              <a class="dropdown-item" href="#scrollspyHeading3">Third</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#scrollspyHeading4">Fourth</a>
-            </li>
-            <li><hr class="dropdown-divider" /></li>
-            <li>
-              <a class="dropdown-item" href="#scrollspyHeading5">Fifth</a>
-            </li>
-          </ul>
+        <li class="nav-item">
+          <a class="nav-link" href="#scrollspyHeading2">Work</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#scrollspyHeading2">Contact</a>
         </li>
       </ul>
     </nav>
-    <div
-      data-bs-spy="scroll"
-      data-bs-target="#navbar-example2"
-      data-bs-offset="0"
-      class="scrollspy-example"
-      tabindex="0"
-    >
-      <!-- hero -->
-      <section id="hero">
-        <div class="container col-xxl-8 px-4 py-5">
-          <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-            <div class="col-10 col-sm-8 col-lg-6">
-              <img
-                src="./assets/img/rendisagala.jpeg"
-                class="d-block mx-lg-auto img-fluid"
-                alt="Bootstrap Themes"
-                width="700"
-                height="500"
-                loading="lazy"
-              />
-            </div>
-            <div class="col-lg-6">
-              <h1 id="scrollspyHeading1">
-                <a
-                  href=""
-                  class="typewrite"
-                  data-period="100"
-                  data-type='[ "Hi, I am","Rendi Anjuma","Sagala."  ]'
-                >
-                  <span class="wrap"></span>
-                </a>
-              </h1>
-              <p class="lead">Web Developer, lifetime learner.</p>
-              <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                <button
-                  type="button"
-                  class="btn btn-primary btn-lg px-4 me-md-2"
-                >
-                  Discover
-                </button>
-              </div>
+    <!-- hero -->
+    <section id="hero">
+      <div class="container col-xxl-8 px-4 py-5" id="scrollspyHeading1">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <div class="col-10 col-sm-8 col-lg-6">
+            <img
+              src="./assets/img/rendisagala.jpeg"
+              class="d-block mx-lg-auto img-fluid"
+              alt="Bootstrap Themes"
+              width="700"
+              height="500"
+              loading="lazy"
+            />
+          </div>
+          <div class="col-lg-6">
+            <h1>
+              <a
+                href=""
+                class="typewrite"
+                data-period="100"
+                data-type='[ "Hi, I am","Rendi Anjuma","Sagala."  ]'
+              >
+                <span class="wrap"></span>
+              </a>
+            </h1>
+            <p class="lead">Web Developer, lifetime learner.</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+              <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">
+                Discover
+              </button>
             </div>
           </div>
         </div>
-      </section>
-      <!-- about -->
-      <section id="about" class="about">
-        <div class="container">
-          <div class="row no-gutters">
-            <div
-              class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-lg-start"
-            >
-              <img
-                src="./assets/img/rendisagala2.jpeg"
-                alt=""
-                srcset=""
-                class="img-fluid rounded-circle"
-              />
-            </div>
-            <div
-              class="col-xl-7 ps-0 ps-lg-5 pe-lg-1 d-flex align-items-stretch"
-            >
-              <div class="content d-flex flex-column justify-content-center">
-                <h3 id="scrollspyHeading2">About Me</h3>
-                <hr />
+      </div>
+    </section>
+    <!-- about -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="row no-gutters">
+          <div
+            class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-lg-start"
+          >
+            <img
+              src="./assets/img/rendisagala2.jpeg"
+              alt=""
+              srcset=""
+              class="img-fluid rounded-circle"
+            />
+          </div>
+          <div
+            class="col-xl-7 ps-0 ps-lg-5 pe-lg-1 d-flex align-items-stretch"
+            id="scrollspyHeading2"
+          >
+            <div class="content d-flex flex-column justify-content-center">
+              <h3>About Me</h3>
+              <hr />
 
-                <p>
-                  Hi&#128075;, i am Rendi Anjuma Sagala. Currently, i am
-                  studying accounting major in Tanjungpura University,
-                  Indonesia. Beside my college major, i am interested in
-                  technology especially programming. If you interested with my
-                  resume and portfolio, please don't mind to reach me on contact
-                  below. Thank You!!
-                </p>
+              <p>
+                Hi&#128075;, i am Rendi Anjuma Sagala. Currently, i am studying
+                accounting major in Tanjungpura University, Indonesia. Beside my
+                college major, i am interested in technology especially
+                programming. If you interested with my resume and portfolio,
+                please don't mind to reach me on contact below. Thank You!!
+              </p>
 
-                <div class="col-md-6 d-md-flex align-items-md-stretch">
-                  <div class="count-box">
-                    <i class="bi bi-journal-richtext"></i>
-                  </div>
+              <div class="col-md-6 d-md-flex align-items-md-stretch">
+                <div class="count-box">
+                  <i class="bi bi-journal-richtext"></i>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <!-- skills -->
-      <!-- work -->
-      <!-- contact -->
-    </div>
+      </div>
+    </section>
+    <!-- skills -->
+    <!-- work -->
+    <!-- contact -->
 
     <!-- bootstrap script -->
     <script
