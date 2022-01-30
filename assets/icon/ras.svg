@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" style="margin: auto; background: none; display: block; shape-rendering: auto;" width="78" height="40" preserveAspectRatio="xMidYMid">
+<style type="text/css">
+  text {
+    text-anchor: middle; font-size: 28px; opacity: 0;
+  }
+</style>
+<g style="transform-origin:39px 20px;transform:scale(1)">
+<g transform="translate(39,20)">
+  <g transform="translate(0,0)"><g class="path" style="transform: scale(0.91); transform-origin: -13.76px -1.96073px; animation: 1s linear -0.44s infinite normal forwards running breath-6923e7e7-16e4-48d3-9f38-7c6231c94ff7;"><path d="M7.25-7.45L7.25-7.45L5.66-7.45L5.66-7.28L5.99 0L2.24 0L2.58-6.80L2.24-19.32L8.32-19.32L8.32-19.32Q11.00-19.32 12.60-17.86L12.60-17.86L12.60-17.86Q14.20-16.41 14.20-14L14.20-14L14.20-14Q14.20-12.18 13.26-10.68L13.26-10.68L13.26-10.68Q12.32-9.18 10.72-8.32L10.72-8.32L15.60-1.43L12.21 0.31L7.84-7.48L7.84-7.48Q7.64-7.45 7.25-7.45zM7.31-16.49L7.31-16.49L5.94-16.49L5.74-10.16L7.64-10.16L7.64-10.16Q9.04-10.16 9.81-11.09L9.81-11.09L9.81-11.09Q10.58-12.01 10.58-13.72L10.58-13.72L10.58-13.72Q10.58-16.49 7.31-16.49" fill="#000000" stroke="none" stroke-width="none" transform="translate(-22.67999267578125,7.544267807006836)" style="fill: rgb(0, 0, 0);"></path></g><g class="path" style="transform: scale(0.91); transform-origin: 2.53501px -2.13073px; animation: 1s linear -0.22s infinite normal forwards running breath-6923e7e7-16e4-48d3-9f38-7c6231c94ff7;"><path d="M33.80-0.48L29.76 0.14L28.39-5.32L21.70-5.32L20.22 0L16.63-0.28L19.10-7.08L22.85-19.12L27.86-19.49L31.47-7.50L33.80-0.48zM27.55-8.29L25.34-15.85L24.98-15.85L22.57-8.29L27.55-8.29" fill="#000000" stroke="none" stroke-width="none" transform="translate(-22.67999267578125,7.544267807006836)" style="fill: rgb(0, 0, 0);"></path></g><g class="path" style="transform: scale(0.91); transform-origin: 18.41px -2.10073px; animation: 1s linear 0s infinite normal forwards running breath-6923e7e7-16e4-48d3-9f38-7c6231c94ff7;"><path d="M34.58-2.55L36.76-5.57L36.76-5.57Q39.14-3.19 41.52-3.19L41.52-3.19L41.52-3.19Q42.76-3.19 43.50-3.77L43.50-3.77L43.50-3.77Q44.24-4.34 44.24-5.25L44.24-5.25L44.24-5.25Q44.24-6.16 43.34-6.79L43.34-6.79L43.34-6.79Q42.45-7.42 41.17-7.90L41.17-7.90L41.17-7.90Q39.90-8.37 38.64-8.97L38.64-8.97L38.64-8.97Q37.38-9.58 36.48-10.70L36.48-10.70L36.48-10.70Q35.59-11.82 35.59-13.41L35.59-13.41L35.59-13.41Q35.59-15.93 37.69-17.77L37.69-17.77L37.69-17.77Q39.79-19.60 42.67-19.60L42.67-19.60L42.67-19.60Q43.99-19.60 45.22-19.32L45.22-19.32L45.22-19.32Q46.45-19.04 47.60-18.51L47.60-18.51L45.70-14.42L45.70-14.42Q44.91-15.04 43.55-15.55L43.55-15.55L43.55-15.55Q42.20-16.07 41.17-16.07L41.17-16.07L41.17-16.07Q40.15-16.07 39.52-15.58L39.52-15.58L39.52-15.58Q38.89-15.09 38.89-14.28L38.89-14.28L38.89-14.28Q38.89-13.47 39.79-12.84L39.79-12.84L39.79-12.84Q40.68-12.21 41.96-11.73L41.96-11.73L41.96-11.73Q43.23-11.26 44.51-10.68L44.51-10.68L44.51-10.68Q45.78-10.11 46.68-8.99L46.68-8.99L46.68-8.99Q47.57-7.87 47.57-6.27L47.57-6.27L47.57-6.27Q47.57-3.64 45.47-1.67L45.47-1.67L45.47-1.67Q43.37 0.31 40.57 0.31L40.57 0.31L40.57 0.31Q38.47 0.31 36.85-0.70L36.85-0.70L36.85-0.70Q35.42-1.57 34.83-2.24L34.83-2.24L34.58-2.55" fill="#000000" stroke="none" stroke-width="none" transform="translate(-22.67999267578125,7.544267807006836)" style="fill: rgb(0, 0, 0);"></path></g></g>
+</g>
+</g>
+<style id="breath-6923e7e7-16e4-48d3-9f38-7c6231c94ff7" data-anikit="">@keyframes breath-6923e7e7-16e4-48d3-9f38-7c6231c94ff7
+{
+  0% {
+    animation-timing-function: cubic-bezier(0.9647,0.2413,-0.0705,0.7911);
+    transform: scale(0.9099999999999999);
+  }
+  51% {
+    animation-timing-function: cubic-bezier(0.9226,0.2631,-0.0308,0.7628);
+    transform: scale(1.02994);
+  }
+  100% {
+    transform: scale(0.9099999999999999);
+  }
+}</style></svg>
