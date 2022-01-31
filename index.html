@@ -14,6 +14,12 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
   </head>
   <body
     data-bs-spy="scroll"
@@ -23,7 +29,10 @@
     tabindex="0"
   >
     <!-- navbar -->
-    <nav id="navbar-example2" class="navbar navbar-light fixed-top px-3">
+    <nav
+      id="navbar-example2"
+      class="navbar navbar-light bg-body fixed-top px-3"
+    >
       <a
         class="navbar-brand"
         href="#"
@@ -39,10 +48,20 @@
           <a class="nav-link" href="#scrollspyHeading2">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#scrollspyHeading2">Work</a>
+          <a class="nav-link" href="#scrollspyHeading3">Work</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#scrollspyHeading2">Contact</a>
+          <a class="nav-link" href="#scrollspyHeading4">Contact</a>
+        </li>
+        <li class="nav-item">
+          <button type="button" class="btn switchButton" onclick="switchMode()">
+            <img
+              src="./assets/icon/dark.svg"
+              alt="Switch Mode"
+              srcset=""
+              class="switchIcon"
+            />
+          </button>
         </li>
       </ul>
     </nav>
@@ -83,7 +102,7 @@
     </section>
     <!-- about -->
     <section id="about" class="about">
-      <div class="container">
+      <div class="container" id="scrollspyHeading2">
         <div class="row no-gutters">
           <div
             class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-lg-start"
@@ -95,10 +114,7 @@
               class="img-fluid rounded-circle"
             />
           </div>
-          <div
-            class="col-xl-7 ps-0 ps-lg-5 pe-lg-1 d-flex align-items-stretch"
-            id="scrollspyHeading2"
-          >
+          <div class="col-xl-7 ps-0 ps-lg-5 pe-lg-1 d-flex align-items-stretch">
             <div class="content d-flex flex-column justify-content-center">
               <h3>About Me</h3>
               <hr />
@@ -107,9 +123,10 @@
                 Hi&#128075;, i am Rendi Anjuma Sagala. Currently, i am studying
                 accounting major 4th semester in Tanjungpura University,
                 Indonesia. Beside my college major, i am interested in
-                technology especially programming. If you interested with my
-                resume and portfolio, please don't mind to reach me on contact
-                below. Thank You!!
+                technology especially programming. I started learning
+                programming since 4 months ago, and now I'm learning back end
+                web development. If you interested with my resume and portfolio,
+                please don't mind to reach me on contact below.
               </p>
 
               <div class="col-md-6 d-md-flex align-items-md-stretch">
@@ -123,9 +140,167 @@
       </div>
     </section>
     <!-- skills -->
+
+    <section class="section services-section" id="skills services">
+      <div class="container" id="scrollspyHeading3">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="section-title">
+              <h2>My Skills</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6 col-lg-4">
+            <div class="feature-box-1">
+              <div class="icon">
+                <i class="fab fa-html5"></i>
+              </div>
+              <div class="feature-content">
+                <h5>HTML5</h5>
+                <p>
+                  HTML stands for Hyper Text Markup Language. HTML is the
+                  standard markup language for Web pages.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4">
+            <div class="feature-box-1">
+              <div class="icon">
+                <i class="fab fa-css3"></i>
+              </div>
+              <div class="feature-content">
+                <h5>CSS3</h5>
+                <p>
+                  CSS stands for Cascading Style Sheets, adds styles like fonts
+                  and colors to websites.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4">
+            <div class="feature-box-1">
+              <div class="icon">
+                <i class="fab fa-bootstrap"></i>
+              </div>
+              <div class="feature-content">
+                <h5>BOOTSTRAP5</h5>
+                <p>
+                  Bootstrap is an open-source CSS framework directed at
+                  responsive, mobile-first front-end web development.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4">
+            <div class="feature-box-1">
+              <div class="icon">
+                <i class="fab fa-js"></i>
+              </div>
+              <div class="feature-content">
+                <h5>JavaScript</h5>
+                <p>
+                  JavaScript is a programming language used to create dynamic
+                  and interactive web pages.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4">
+            <div class="feature-box-1">
+              <div class="icon">
+                <i class="fab fa-node-js"></i>
+              </div>
+              <div class="feature-content">
+                <h5>Node.js</h5>
+                <p>
+                  Node.js is an open-source, cross-platform, back-end JavaScript
+                  runtime environment that runs on the V8 engine and executes
+                  JavaScript code outside a web browser.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4">
+            <div class="feature-box-1">
+              <div class="icon">
+                <i class="fas fa-toolbox"></i>
+              </div>
+              <div class="feature-content">
+                <h5>Express.js</h5>
+                <p>
+                  Express.js is a back end web application framework for
+                  Node.js, released as free and open-source software under the
+                  MIT License.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4">
+            <div class="feature-box-1">
+              <div class="icon">
+                <i class="fas fa-database"></i>
+              </div>
+              <div class="feature-content">
+                <h5>MongoDB</h5>
+                <p>
+                  MongoDB is a source-available cross-platform document-oriented
+                  database program. Classified as a NoSQL database program,
+                  MongoDB uses JSON-like documents with optional schemas.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4">
+            <div class="feature-box-1">
+              <div class="icon">
+                <i class="fab fa-git"></i>
+              </div>
+              <div class="feature-content">
+                <h5>Git</h5>
+                <p>
+                  Git is software for tracking changes in any set of files,
+                  usually used for coordinating work among programmers
+                  collaboratively developing source code during software
+                  development.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4">
+            <div class="feature-box-1">
+              <div class="icon">
+                <i class="fab fa-figma"></i>
+              </div>
+              <div class="feature-content">
+                <h5>Figma</h5>
+                <p>
+                  Figma is a vector graphics editor and prototyping tool which
+                  is primarily web-based, with additional offline features
+                  enabled by desktop applications for macOS and Windows.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- work -->
     <!-- contact -->
+    <!-- copyright -->
 
+    <!-- script -->
+    <script src="./assets/js/main.js"></script>
     <!-- bootstrap script -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
