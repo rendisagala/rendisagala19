@@ -5,8 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Web</title>
+
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/font.css" />
+    <!-- title icon -->
+    <link rel="icon" href="./assets/icon/fa faR.svg" />
     <!-- bootstrap css -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
@@ -35,23 +38,38 @@
     >
       <a
         class="navbar-brand"
-        href="#"
+        href="javascript:void(0);"
         style="background: url(/your-background-url)"
       >
         <img src="./assets/icon/ras.svg"
       /></a>
       <ul class="nav nav-pills">
         <li class="nav-item">
-          <a class="nav-link" href="#scrollspyHeading1">Home</a>
+          <a class="nav-link link-dark" href="#hero">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#scrollspyHeading2">About</a>
+          <a class="nav-link link-dark" href="#about">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            data-bs-toggle="dropdown"
+            href="#"
+            role="button"
+            aria-expanded="false"
+            >Work</a
+          >
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="#skills">Skills</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#portfolioList">Portfolio</a>
+            </li>
+          </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#scrollspyHeading3">Work</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#scrollspyHeading4">Contact</a>
+          <a class="nav-link link-dark" href="#contactList">Contact</a>
         </li>
         <li class="nav-item">
           <button type="button" class="btn switchButton" onclick="switchMode()">
@@ -66,10 +84,11 @@
       </ul>
     </nav>
     <!-- hero -->
-    <section id="hero">
+    <div id="hero"></div>
+    <section id="hero" class="" style="height: 100%">
       <div class="container col-xxl-8 px-4 py-5" id="scrollspyHeading1">
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-          <div class="col-10 col-sm-8 col-lg-6">
+          <div class="col-10 col-sm-8 col-lg-7 py-lg-5">
             <img
               src="./assets/img/rendisagala.jpeg"
               class="d-block mx-lg-auto img-fluid"
@@ -79,7 +98,7 @@
               loading="lazy"
             />
           </div>
-          <div class="col-lg-6">
+          <div class="col-lg-5">
             <h1>
               <a
                 href=""
@@ -92,8 +111,11 @@
             </h1>
             <p class="lead">Web Developer, lifetime learner.</p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-              <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">
-                Discover
+              <button
+                type="button"
+                class="btn btn-primary btn-lg px-4 me-md-2 discoverButton"
+              >
+                <a href="#about" class="btn-solid-reg discoverMain">Discover</a>
               </button>
             </div>
           </div>
@@ -101,8 +123,9 @@
       </div>
     </section>
     <!-- about -->
-    <section id="about" class="about">
-      <div class="container" id="scrollspyHeading2">
+    <div id="about"></div>
+    <section id="about" class="" style="height: 100%">
+      <div class="container">
         <div class="row no-gutters">
           <div
             class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-lg-start"
@@ -128,7 +151,11 @@
                 web development. If you interested with my resume and portfolio,
                 please don't mind to reach me on contact below.
               </p>
-
+              <a
+                class="btn-solid-reg btn portoBtn col-lg-3"
+                href="#scrollspyHeading3"
+                >Discover More</a
+              >
               <div class="col-md-6 d-md-flex align-items-md-stretch">
                 <div class="count-box">
                   <i class="bi bi-journal-richtext"></i>
@@ -140,13 +167,13 @@
       </div>
     </section>
     <!-- skills -->
-
-    <section class="section services-section" id="skills services">
-      <div class="container" id="scrollspyHeading3">
+    <div id="skills"></div>
+    <section class="skills" id="">
+      <div class="container">
         <div class="row">
           <div class="col-lg-6">
             <div class="section-title">
-              <h2>My Skills</h2>
+              <h2 id="">My Skills</h2>
             </div>
           </div>
         </div>
@@ -230,7 +257,7 @@
           <div class="col-sm-6 col-lg-4">
             <div class="feature-box-1">
               <div class="icon">
-                <i class="fas fa-toolbox"></i>
+                <i class="fas fa-book"></i>
               </div>
               <div class="feature-content">
                 <h5>Express.js</h5>
@@ -294,13 +321,422 @@
         </div>
       </div>
     </section>
-
     <!-- work -->
+    <!--  <section class="dark py-1">
+      <div class="container py-4">
+        <h1 class="h1 text-center text-light" id="pageHeaderTitle">
+          Portfolio
+        </h1>
+
+        <article class="postcard dark blue">
+          <a class="postcard__img_link" href="javascript:void(0);">
+            <img
+              class="postcard__img"
+              src="https://picsum.photos/1000/1000"
+              alt="Image Title"
+            />
+          </a>
+          <div class="postcard__text">
+            <h1 class="postcard__title blue"><a href="#">Podcast Title</a></h1>
+            <div class="postcard__subtitle small">
+              <time>
+                <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+              </time>
+            </div>
+            <div class="postcard__bar"></div>
+            <div class="postcard__preview-txt">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
+              fugiat asperiores inventore beatae accusamus odit minima enim,
+              commodi quia, doloribus eius! Ducimus nemo accusantium maiores
+              velit corrupti tempora reiciendis molestiae repellat vero. Eveniet
+              ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum
+              dolores nobis enim quidem excepturi, illum quos!
+            </div>
+            <ul class="postcard__tagbox">
+              <li class="tag__item">
+                <i class="fab fa-github mr-2"></i>Github
+              </li>
+              <li class="tag__item"><i class="fas fa-link mr-2"></i>Demo</li>
+            </ul>
+          </div>
+        </article>
+        <article class="postcard dark red">
+          <a class="postcard__img_link" href="#">
+            <img
+              class="postcard__img"
+              src="https://picsum.photos/501/500"
+              alt="Image Title"
+            />
+          </a>
+          <div class="postcard__text">
+            <h1 class="postcard__title red"><a href="#">Podcast Title</a></h1>
+            <div class="postcard__subtitle small">
+              <time>
+                <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+              </time>
+            </div>
+            <div class="postcard__bar"></div>
+            <div class="postcard__preview-txt">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
+              fugiat asperiores inventore beatae accusamus odit minima enim,
+              commodi quia, doloribus eius! Ducimus nemo accusantium maiores
+              velit corrupti tempora reiciendis molestiae repellat vero. Eveniet
+              ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum
+              dolores nobis enim quidem excepturi, illum quos!
+            </div>
+            <ul class="postcard__tagbox">
+              <li class="tag__item">
+                <i class="fab fa-github mr-2"></i>Github
+              </li>
+              <li class="tag__item"><i class="fas fa-link mr-2"></i>Demo</li>
+            </ul>
+          </div>
+        </article>
+        <article class="postcard dark green">
+          <a class="postcard__img_link" href="#">
+            <img
+              class="postcard__img"
+              src="https://picsum.photos/500/501"
+              alt="Image Title"
+            />
+          </a>
+          <div class="postcard__text">
+            <h1 class="postcard__title green"><a href="#">Podcast Title</a></h1>
+            <div class="postcard__subtitle small">
+              <time>
+                <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+              </time>
+            </div>
+            <div class="postcard__bar"></div>
+            <div class="postcard__preview-txt">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
+              fugiat asperiores inventore beatae accusamus odit minima enim,
+              commodi quia, doloribus eius! Ducimus nemo accusantium maiores
+              velit corrupti tempora reiciendis molestiae repellat vero. Eveniet
+              ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum
+              dolores nobis enim quidem excepturi, illum quos!
+            </div>
+            <ul class="postcard__tagbox">
+              <li class="tag__item">
+                <i class="fab fa-github mr-2"></i>Github
+              </li>
+              <li class="tag__item"><i class="fas fa-link mr-2"></i>Demo</li>
+            </ul>
+          </div>
+        </article>
+        <article class="postcard dark yellow">
+          <a class="postcard__img_link" href="#">
+            <img
+              class="postcard__img"
+              src="https://picsum.photos/501/501"
+              alt="Image Title"
+            />
+          </a>
+          <div class="postcard__text">
+            <h1 class="postcard__title yellow">
+              <a href="#">Podcast Title</a>
+            </h1>
+            <div class="postcard__subtitle small">
+              <time>
+                <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+              </time>
+            </div>
+            <div class="postcard__bar"></div>
+            <div class="postcard__preview-txt">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
+              fugiat asperiores inventore beatae accusamus odit minima enim,
+              commodi quia, doloribus eius! Ducimus nemo accusantium maiores
+              velit corrupti tempora reiciendis molestiae repellat vero. Eveniet
+              ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum
+              dolores nobis enim quidem excepturi, illum quos!
+            </div>
+            <ul class="postcard__tagbox">
+              <li class="tag__item">
+                <i class="fab fa-github mr-2"></i>Github
+              </li>
+              <li class="tag__item"><i class="fas fa-link mr-2"></i>Demo</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section> -->
+    <div id="portfolioList"></div>
+    <section class="light py-1" id="">
+      <div class="container">
+        <div class="h1 text-center text-dark" id="pageHeaderTitle">
+          Portfolio
+        </div>
+
+        <article class="postcard light blue">
+          <a class="postcard__img_link" href="javascript:void(0);">
+            <img
+              class="postcard__img"
+              src="https://picsum.photos/1000/1000"
+              alt="Image Title"
+            />
+          </a>
+          <div class="postcard__text t-dark">
+            <h1 class="postcard__title blue">
+              <a href="#">Portfolio Website</a>
+            </h1>
+            <div class="postcard__subtitle small">
+              <time>
+                <i class="fas fa-calendar-alt mr-2"></i>28th January 2022
+              </time>
+            </div>
+            <div class="postcard__bar"></div>
+            <div class="postcard__preview-txt">
+              This is my portfolio website.
+            </div>
+            <ul class="postcard__tagbox">
+              <li class="tag__item">
+                <i class="fab fa-github mr-2"></i>Github
+              </li>
+              <li class="tag__item"><i class="fas fa-link mr-2"></i>Demo</li>
+            </ul>
+          </div>
+        </article>
+        <article class="postcard light red">
+          <a class="postcard__img_link" href="javascript:void(0);">
+            <img
+              class="postcard__img"
+              src="./assets/img/rendisagala.jpeg"
+              alt="Image Title"
+            />
+          </a>
+          <div class="postcard__text t-dark">
+            <h1 class="postcard__title red"><a href="#">Podcast Title</a></h1>
+            <div class="postcard__subtitle small">
+              <time>
+                <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+              </time>
+            </div>
+            <div class="postcard__bar"></div>
+            <div class="postcard__preview-txt">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
+              fugiat asperiores inventore beatae accusamus odit minima enim,
+              commodi quia, doloribus eius! Ducimus nemo accusantium maiores
+              velit corrupti tempora reiciendis molestiae repellat vero. Eveniet
+              ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum
+              dolores nobis enim quidem excepturi, illum quos!
+            </div>
+            <ul class="postcard__tagbox">
+              <li class="tag__item">
+                <i class="fab fa-github mr-2"></i>Github
+              </li>
+              <li class="tag__item"><i class="fas fa-link mr-2"></i>Demo</li>
+            </ul>
+          </div>
+        </article>
+        <article class="postcard light green">
+          <a class="postcard__img_link" href="javascript:void(0);">
+            <img
+              class="postcard__img"
+              src="https://picsum.photos/500/501"
+              alt="Image Title"
+            />
+          </a>
+          <div class="postcard__text t-dark">
+            <h1 class="postcard__title green"><a href="#">Podcast Title</a></h1>
+            <div class="postcard__subtitle small">
+              <time>
+                <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+              </time>
+            </div>
+            <div class="postcard__bar"></div>
+            <div class="postcard__preview-txt">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
+              fugiat asperiores inventore beatae accusamus odit minima enim,
+              commodi quia, doloribus eius! Ducimus nemo accusantium maiores
+              velit corrupti tempora reiciendis molestiae repellat vero. Eveniet
+              ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum
+              dolores nobis enim quidem excepturi, illum quos!
+            </div>
+            <ul class="postcard__tagbox">
+              <li class="tag__item">
+                <i class="fab fa-github mr-2"></i>Github
+              </li>
+              <li class="tag__item"><i class="fas fa-link mr-2"></i>Demo</li>
+            </ul>
+          </div>
+        </article>
+        <article class="postcard light yellow">
+          <a class="postcard__img_link" href="javascript:void(0);">
+            <img
+              class="postcard__img"
+              src="https://picsum.photos/501/501"
+              alt="Image Title"
+            />
+          </a>
+          <div class="postcard__text t-dark">
+            <h1 class="postcard__title yellow">
+              <a href="#">Podcast Title</a>
+            </h1>
+            <div class="postcard__subtitle small">
+              <time>
+                <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+              </time>
+            </div>
+            <div class="postcard__bar"></div>
+            <div class="postcard__preview-txt">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
+              fugiat asperiores inventore beatae accusamus odit minima enim,
+              commodi quia, doloribus eius! Ducimus nemo accusantium maiores
+              velit corrupti tempora reiciendis molestiae repellat vero. Eveniet
+              ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum
+              dolores nobis enim quidem excepturi, illum quos!
+            </div>
+            <ul class="postcard__tagbox">
+              <li class="tag__item">
+                <i class="fab fa-github mr-2"></i>Github
+              </li>
+              <li class="tag__item"><i class="fas fa-link mr-2"></i>Demo</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <!-- contact -->
+
+    <section class="contactList py-4" id="contactList" style="height: 100%">
+      <div id="scrollspyHeading4"></div>
+      <div class="contact">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-5 mr-auto">
+              <h2>Contact Us</h2>
+              <p class="mb-5">
+                If there are questions you want to ask or something about my
+                work, please leave a message here
+              </p>
+              <ul class="list-unstyled pl-md-5 mb-5">
+                <li class="d-flex text-black mb-2">
+                  <span class="mr-3"><span class="icon-map"></span></span> 34
+                  West Borneo, <br />
+                  Indonesia
+                </li>
+                <li class="d-flex text-black mb-2">
+                  <span class="mr-3"><span class="icon-phone"></span></span> +62
+                  (xxx)-(xxx)
+                </li>
+                <li class="d-flex text-black">
+                  <span class="mr-3"
+                    ><span class="icon-envelope-o"></span
+                  ></span>
+                  rendisagala19@gmail.com
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-7">
+              <form
+                class="mb-5"
+                method="post"
+                id="contactForm"
+                name="contactForm"
+                novalidate="novalidate"
+              >
+                <div class="row">
+                  <div class="col-md-12 form-group">
+                    <label for="name" class="col-form-label">Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="name"
+                      id="name"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 form-group">
+                    <label for="email" class="col-form-label">Email</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="email"
+                      id="email"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 form-group">
+                    <label for="message" class="col-form-label">Message</label>
+                    <textarea
+                      class="form-control"
+                      name="message"
+                      id="message"
+                      cols="30"
+                      rows="7"
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <input
+                      type="submit"
+                      value="Send Message"
+                      class="btn btn-primary rounded-0 py-2 px-4"
+                    />
+                    <span class="submitting"></span>
+                  </div>
+                </div>
+              </form>
+              <div id="form-message-warning mt-4"></div>
+              <div id="form-message-success">
+                <!-- Your message was sent, thank you! -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- copyright -->
+    <section id="copyright" class="copyright py-10">
+      <div class="container d-md-flex">
+        <div class="me-md-auto text-center text-md-start">
+          <div class="copyright">© Copyright 2022. All Rights Reserved</div>
+          <div class="credits">Web developed by @rendisagala</div>
+        </div>
+        <div class="social-links text-center text-md-right mt-3">
+          <a
+            href="https://github.com/rendisagala"
+            target="_blank"
+            role="button"
+            class="btn-lg instagram"
+            ><i class="fab fa-github ms-lg-1"></i
+          ></a>
+          <a
+            href="https://instagram.com/rendianjuma/"
+            target="_blank"
+            role="button"
+            class="btn-lg instagram"
+            ><i class="fab fa-instagram ms-lg-1"></i
+          ></a>
+          <a
+            href="https://www.facebook.com/rendi.sagala"
+            target="_blank"
+            role="button"
+            class="btn-lg facebook"
+            ><i class="fab fa-facebook ms-lg-1"></i
+          ></a>
+          <a href="javascript:void(0);" target="" role="button" class="twitter"
+            ><i class="fab fa-twitter ms-lg-1 btn-lg"></i
+          ></a>
+          <a
+            href="https://linkedin.com/in/rendi-anjuma-sagala-a3b2421b6 "
+            target="_blank"
+            role="button"
+            class="btn-lg linkedin"
+            ><i class="fab fa-linkedin ms-lg-1"></i
+          ></a>
+        </div>
+      </div>
+    </section>
 
     <!-- script -->
     <script src="./assets/js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./assets/js/smoothScroll.js"></script>
     <!-- bootstrap script -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
@@ -313,5 +749,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="./assets/js/typedText.js"></script>
+    <!-- Dark Mode -->
   </body>
 </html>
