@@ -23,6 +23,8 @@
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
+    <!-- dark Mode -->
+    <link rel="stylesheet" href="/assets/css/dark.css" />
   </head>
   <body
     data-bs-spy="scroll"
@@ -72,7 +74,12 @@
           <a class="nav-link link-dark" href="#contactList">Contact</a>
         </li>
         <li class="nav-item">
-          <button type="button" class="btn switchButton" onclick="switchMode()">
+          <button
+            type="button"
+            class="btn switchButton"
+            id=""
+            onclick="switchMode()"
+          >
             <img
               src="./assets/icon/dark.svg"
               alt="Switch Mode"
@@ -168,7 +175,7 @@
     </section>
     <!-- skills -->
     <div id="skills"></div>
-    <section class="skills" id="">
+    <section class="skills py-5" id="">
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
@@ -599,13 +606,18 @@
 
     <!-- contact -->
 
-    <section class="contactList py-4" id="contactList" style="height: 100%">
+    <section
+      class="contactList py-4 position-relative"
+      id="contactList"
+      style="height: 100%"
+    >
       <div id="scrollspyHeading4"></div>
       <div class="contact">
         <div class="container">
           <div class="row">
             <div class="col-md-5 mr-auto">
               <h2>Contact Us</h2>
+              <hr />
               <p class="mb-5">
                 If there are questions you want to ask or something about my
                 work, please leave a message here
@@ -691,48 +703,51 @@
       </div>
     </section>
     <!-- copyright -->
-    <section id="copyright" class="copyright py-10">
-      <div class="container d-md-flex">
+    <section
+      id="copyright"
+      class="copyright mt-lg-5 bottom-0 row"
+      style="width: 100%"
+    >
+      <div class="container d-sm-flex col-lg-12">
         <div class="me-md-auto text-center text-md-start">
           <div class="copyright">© Copyright 2022. All Rights Reserved</div>
           <div class="credits">Web developed by @rendisagala</div>
         </div>
-        <div class="social-links text-center text-md-right mt-3">
+        <div class="social-links text-end">
           <a
             href="https://github.com/rendisagala"
             target="_blank"
             role="button"
             class="btn-lg instagram"
-            ><i class="fab fa-github ms-lg-1"></i
+            ><i class="fab fa-github ms-lg-4 fa-lg"></i
           ></a>
           <a
             href="https://instagram.com/rendianjuma/"
             target="_blank"
             role="button"
             class="btn-lg instagram"
-            ><i class="fab fa-instagram ms-lg-1"></i
+            ><i class="fab fa-instagram ms-lg-4 fa-lg"></i
           ></a>
           <a
             href="https://www.facebook.com/rendi.sagala"
             target="_blank"
             role="button"
             class="btn-lg facebook"
-            ><i class="fab fa-facebook ms-lg-1"></i
+            ><i class="fab fa-facebook ms-lg-4 fa-lg"></i
           ></a>
           <a href="javascript:void(0);" target="" role="button" class="twitter"
-            ><i class="fab fa-twitter ms-lg-1 btn-lg"></i
+            ><i class="fab fa-twitter ms-lg-4 fa-lg btn-lg"></i
           ></a>
           <a
             href="https://linkedin.com/in/rendi-anjuma-sagala-a3b2421b6 "
             target="_blank"
             role="button"
             class="btn-lg linkedin"
-            ><i class="fab fa-linkedin ms-lg-1"></i
+            ><i class="fab fa-linkedin ms-lg-4 fa-lg"></i
           ></a>
         </div>
       </div>
     </section>
-
     <!-- script -->
     <script src="./assets/js/main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -750,5 +765,6 @@
     ></script>
     <script src="./assets/js/typedText.js"></script>
     <!-- Dark Mode -->
+    <script src="./assets/js/dark.js"></script>
   </body>
 </html>

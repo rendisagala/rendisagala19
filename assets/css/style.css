@@ -20,6 +20,13 @@ body {
 .dropdown a {
   color: #212529;
 }
+.active {
+  background-color: #000 !important;
+}
+.active:hover {
+  color: orange !important;
+  text-decoration: none;
+}
 .nav-item a:hover {
   color: orange;
   text-decoration: none;
@@ -28,6 +35,7 @@ body {
   color: orange;
   text-decoration: none;
 }
+
 /* ----- */
 
 /* discoverButton */
@@ -37,6 +45,12 @@ body {
 }
 .discoverButton a:hover {
   color: black;
+}
+/* ----- */
+
+/* about section */
+section#about {
+  background-color: #f3f5f7 !important;
 }
 /* ----- */
 
@@ -547,3 +561,66 @@ a:hover {
 }
 
 /* ----- */
+
+/* contact */
+.social-links a {
+  color: black !important;
+}
+.social-links a:hover i {
+  color: orange !important;
+  transform: scale(1.5);
+  transition: transform 330ms ease-in-out;
+}
+/* ----- */
+
+/* Media Queries */
+/*
+ * Author: http://stuffandnonsense.co.uk/blog/about/hardboiled_css3_media_queries/
+ */
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  /* Styles */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width: 321px) {
+  /* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 320px) {
+  /* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  /* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width: 1824px) {
+  /* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min-device-pixel-ratio: 1.5) {
+  /* Styles */
+}
+/* ---------- */
