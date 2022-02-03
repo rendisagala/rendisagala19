@@ -30,7 +30,7 @@ function switchMode() {
     document.documentElement.setAttribute("data-theme", "dark");
     darkIcon.style.display = "none";
     lightIcon.style.display = "block";
-    mainImg.src = "./assets/img/rendisagalatp.png";
+
     navLogo.src = "./assets/icon/rasTitle.svg";
     // portfolio
 
@@ -49,7 +49,7 @@ function switchMode() {
     document.documentElement.setAttribute("data-theme", "light");
     lightIcon.style.display = "none";
     darkIcon.style.display = "block";
-    mainImg.src = "./assets/img/rendisagala.jpeg";
+
     navLogo.src = "./assets/icon/ras.svg";
     // portfolio
     portfolioList.classList.remove("dark");
@@ -64,10 +64,4 @@ function switchMode() {
       postcardText[i].classList.toggle("t-dark");
     }
   }
-}
-
-const featureBox = document.querySelectorAll(".feature-box-1");
-
-for (let i = 0; i < featureBox.length; i++) {
-  featureBox[i].setAttribute("data-aos", "flip-down");
 }

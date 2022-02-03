@@ -28,7 +28,7 @@ body {
   --font-color3: orange;
   --nav-active: #212529;
   --heading-color: #292922;
-  --bg-img: ;
+  --bg-img: url(../background/lineBackgroundLight.svg);
   /* postcard skills */
   --slide-color: #20247b;
   --card-color: #fc5356;
