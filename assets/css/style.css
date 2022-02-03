@@ -10,73 +10,99 @@ html,
 body {
   height: 100%;
 }
+section {
+  width: 100%;
+}
 
 body {
   margin: 0;
   overflow-x: hidden;
+  background-color: var(--primary-color);
+}
+
+:root {
+  --primary-color: transparent;
+  --secondary-color: #f3f5f7;
+  --font-color: #212529;
+  --font-color2: white;
+  --font-color3: orange;
+  --nav-active: #212529;
+  --heading-color: #292922;
+  --bg-img: ;
+  /* postcard skills */
+  --slide-color: #20247b;
+  --card-color: #fc5356;
+  --box-shadow: rgba(0, 0, 0, 0.301);
+  /* social links */
+  --icon-hover: rgb(0, 132, 255);
+  /* scroll */
+  --scroll-color: #212529;
 }
 
 /* navbar */
+nav {
+  background-color: var(--secondary-color);
+}
 .dropdown a {
-  color: #212529;
+  color: var(--font-color);
+}
+.dropdown-menu {
+  background-color: var(--primary-color) !important;
 }
 .active {
-  background-color: #000 !important;
+  background-color: var(--nav-active) !important;
 }
 .active:hover {
-  color: orange !important;
+  color: var(--font-color3) !important;
   text-decoration: none;
 }
+.nav-item a {
+  color: var(--font-color);
+}
 .nav-item a:hover {
-  color: orange;
+  color: var(--font-color3);
   text-decoration: none;
 }
 .dropdown a:hover {
-  color: orange;
+  color: var(--font-color3);
   text-decoration: none;
 }
 
 /* ----- */
-
-/* discoverButton */
-.discoverMain {
-  color: white;
+/* switch Button */
+.switchIcon {
+  background-color: white;
+  overflow: hidden;
+}
+/* ----- */
+/* hero */
+section#hero {
+  background-color: var(--primary-color);
+  color: var(--font-color) !important;
+  background-image: var(--bg-img);
+}
+section#hero a {
+  color: var(--font-color);
+}
+section#hero .discoverMain {
+  color: white !important;
   text-decoration: none;
 }
-.discoverButton a:hover {
-  color: black;
-}
-/* ----- */
-
-/* about section */
-section#about {
-  background-color: #f3f5f7 !important;
-}
-/* ----- */
-
-/* button in about */
-a.portoBtn {
-  border-radius: 0.25rem;
-  border: 1px solid transparent;
-  padding: 0.5rem 1rem;
-  color: white;
-  background-color: #0d6efd;
-}
-a.portoBtn:hover {
-  border-radius: 0.25rem;
-}
-/* ----- */
 
 /* TypeWrite Title */
 .typewrite {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 0.15em solid orange; /* The typwriter cursor */
+  border-right: 0.15em solid var(--font-color3); /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: 0.2em; /* Adjust as needed */
   animation: typing 0.1s steps(40, end), blink-caret 0.75s step-end infinite;
-  color: #000;
+  color: var(--font-color);
   text-decoration: none;
+}
+
+.typewrite a:hover {
+  color: var(--font-color) !important;
 }
 
 @keyframes blink-caret {
@@ -85,7 +111,7 @@ a.portoBtn:hover {
     border-color: transparent;
   }
   50% {
-    border-color: orange;
+    border-color: var(--font-color3);
   }
 }
 @keyframes typing {
@@ -98,10 +124,40 @@ a.portoBtn:hover {
 }
 /* ----- */
 
+/* ----- */
+
+/* about section */
+section#about {
+  background-color: var(--secondary-color) !important;
+  color: var(--font-color);
+}
+
+section#about .btn-bar a {
+  color: white !important;
+}
+/* ----- */
+
+/* button in about */
+a.portoBtn {
+  border-radius: 0.25rem;
+  border: 1px solid transparent;
+  padding: 0.5rem 1rem;
+  color: var(--font-color2);
+  background-color: #0d6efd;
+}
+a.portoBtn:hover {
+  border-radius: 0.25rem;
+}
+/* ----- */
+
 /* ----- Skills Box -----*/
+section#skills {
+  background-color: var(--primary-color);
+  color: var(--font-color);
+}
 .feature-box-1 {
   padding: 32px;
-  box-shadow: 0 0 30px rgba(31, 45, 61, 0.125);
+  box-shadow: 0 0 30px var(--box-shadow);
   margin: 15px 0;
   position: relative;
   z-index: 1;
@@ -123,7 +179,7 @@ a.portoBtn:hover {
   width: 70px;
   height: 70px;
   line-height: 70px;
-  background: #fc5356;
+  background: var(--card-color);
   color: #ffffff;
   text-align: center;
   border-radius: 50%;
@@ -137,7 +193,7 @@ a.portoBtn:hover {
   animation: rotateIcon 1s ease forwards;
 }
 .feature-box-1 h5 {
-  color: #20247b;
+  color: var(--slide-color);
   font-weight: 600;
 }
 .feature-box-1 p {
@@ -152,7 +208,7 @@ a.portoBtn:hover {
   right: 0;
   border-radius: 10px;
   width: 0;
-  background: #20247b;
+  background: var(--slide-color);
   z-index: -1;
   -moz-transition: ease all 0.35s;
   -o-transition: ease all 0.35s;
@@ -184,14 +240,11 @@ a.portoBtn:hover {
 }
 .section-title h2 {
   font-weight: 700;
-  color: #20247b;
+  color: var(--card-color);
   font-size: 45px;
   margin: 0 0 15px;
-  border-left: 5px solid #fc5356;
+  border-left: 5px solid var(--slide-color);
   padding-left: 15px;
-}
-.darkMode {
-  content: url("../icon/light.svg");
 }
 
 @keyframes rotateIcon {
@@ -205,21 +258,12 @@ a.portoBtn:hover {
     transform: rotate(0deg);
   }
 }
-/* ---- */
-/* body.dark {
-  background-color: #000;
-}
-body.light {
-  background-color: #999;
-}
- */
+
 /* Portfolio Cards */
 @import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
 
-body {
-  font-family: "Baloo 2", cursive;
+section#skills {
   font-size: 16px;
-  color: #ffffff;
   text-rendering: optimizeLegibility;
   font-weight: initial;
 }
@@ -229,8 +273,8 @@ body {
 .light {
   background: #f3f5f7;
 }
-a,
-a:hover {
+.postcard a,
+.postcard a:hover {
   text-decoration: none;
   transition: color 0.3s ease-in-out;
 }
@@ -563,13 +607,189 @@ a:hover {
 /* ----- */
 
 /* contact */
+section#contact {
+  background-color: var(--secondary-color);
+  color: var(--font-color);
+}
+
+.contact-name {
+  margin-bottom: 30px;
+}
+.contact-name h5 {
+  font-size: 22px;
+  color: var(--slide-color);
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+.contact-name p {
+  font-size: 18px;
+  margin: 0;
+}
+
+.social-share a {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  color: var(--secondary-color);
+  text-align: center;
+  margin-right: 10px;
+}
+.social-share .dribbble {
+  box-shadow: 0 8px 30px -4px rgba(234, 76, 137, 0.5);
+  background-color: #ea4c89;
+}
+.social-share .behance {
+  box-shadow: 0 8px 30px -4px rgba(0, 103, 255, 0.5);
+  background-color: #0067ff;
+}
+.social-share .linkedin {
+  box-shadow: 0 8px 30px -4px rgba(1, 119, 172, 0.5);
+  background-color: #0177ac;
+}
+
+.contact-form .form-control {
+  border: none;
+  border-bottom: 1px solid var(--slide-color);
+  background: transparent;
+  border-radius: 0;
+  padding-left: 0;
+  box-shadow: none !important;
+}
+.contact-form .form-group {
+  border: none;
+  border-bottom: 1px solid var(--slide-color);
+  background: transparent;
+  border-radius: 0;
+  padding-left: 0;
+  box-shadow: none !important;
+}
+.contact-form .form-control:focus {
+  border-bottom: 1px solid var(--primary-color);
+}
+.contact-form .form-control.invalid {
+  border-bottom: 1px solid #ff0000;
+}
+.contact-form .send {
+  margin-top: 20px;
+}
+section#contact input {
+  background-color: var(--secondary-color);
+  color: var(--font-color);
+}
+section#contact input::placeholder {
+  color: var(--font-color);
+}
+section#contact textarea {
+  background-color: var(--secondary-color);
+  color: var(--font-color);
+}
+section#contact textarea::placeholder {
+  color: var(--font-color);
+}
+@media (max-width: 767px) {
+  .contact-form .send {
+    margin-bottom: 20px;
+  }
+}
+
+.section-title h2 {
+  font-weight: 700;
+  color: var(--slide-color);
+  font-size: 45px;
+  margin: 0 0 15px;
+  border-left: 5px solid var(--card-color);
+  padding-left: 15px;
+}
+.section-title {
+  padding-bottom: 45px;
+}
+.contact-form .send {
+  margin-top: 20px;
+}
+.px-btn {
+  padding: 0 50px 0 20px;
+  line-height: 60px;
+  position: relative;
+  display: inline-block;
+  color: var(--slide-color);
+  background: none;
+  border: none;
+}
+.px-btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 30px;
+  background: transparent;
+  border: 1px solid var(--font-color);
+  border-right: 1px solid transparent;
+  -moz-transition: ease all 0.35s;
+  -o-transition: ease all 0.35s;
+  -webkit-transition: ease all 0.35s;
+  transition: ease all 0.35s;
+  width: 60px;
+  height: 60px;
+}
+.px-btn .arrow {
+  width: 13px;
+  height: 2px;
+  background: currentColor;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 25px;
+}
+.px-btn .arrow:after {
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid currentColor;
+  border-top: 2px solid currentColor;
+  content: "";
+  position: absolute;
+  top: -3px;
+  right: 0;
+  display: inline-block;
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
 .social-links a {
-  color: black !important;
+  color: var(--font-color) !important;
 }
 .social-links a:hover i {
-  color: orange !important;
+  color: var(--icon-hover) !important;
   transform: scale(1.5);
   transition: transform 330ms ease-in-out;
+}
+
+section#copyright {
+  background-color: var(--primary-color) !important;
+  color: var(--font-color);
+}
+/* ----- */
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  background-color: var(--scroll-color);
 }
 /* ----- */
 

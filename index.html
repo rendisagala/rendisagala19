@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Web</title>
 
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" id="mainStyle" />
     <link rel="stylesheet" href="./assets/css/font.css" />
     <!-- title icon -->
     <link rel="icon" href="./assets/icon/fa faR.svg" />
+    <!-- dark Mode -->
+    <link rel="stylesheet" href="./assets/css/dark.css" />
     <!-- bootstrap css -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
@@ -23,8 +25,8 @@
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
-    <!-- dark Mode -->
-    <link rel="stylesheet" href="/assets/css/dark.css" />
+    <!-- AOS for animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body
     data-bs-spy="scroll"
@@ -34,16 +36,9 @@
     tabindex="0"
   >
     <!-- navbar -->
-    <nav
-      id="navbar-example2"
-      class="navbar navbar-light bg-body fixed-top px-3"
-    >
-      <a
-        class="navbar-brand"
-        href="javascript:void(0);"
-        style="background: url(/your-background-url)"
-      >
-        <img src="./assets/icon/ras.svg"
+    <nav id="navbar-example2" class="navbar fixed-top px-3">
+      <a class="navbar-brand" href="javascript:void(0);">
+        <img src="./assets/icon/ras.svg" class="navLogo"
       /></a>
       <ul class="nav nav-pills">
         <li class="nav-item">
@@ -71,34 +66,65 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link link-dark" href="#contactList">Contact</a>
+          <a class="nav-link link-dark" href="#contact">Contact</a>
         </li>
         <li class="nav-item">
           <button
             type="button"
-            class="btn switchButton"
+            class="btn switchButton m-lg-1"
             id=""
             onclick="switchMode()"
           >
-            <img
-              src="./assets/icon/dark.svg"
-              alt="Switch Mode"
-              srcset=""
-              class="switchIcon"
-            />
+            <svg
+              class="darkIcon"
+              stroke="currentColor"
+              fill="none"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              height="20"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <svg
+              class="lightIcon"
+              style="display: none"
+              stroke="white"
+              fill="none"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              height="20"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
           </button>
         </li>
       </ul>
     </nav>
     <!-- hero -->
-    <div id="hero"></div>
-    <section id="hero" class="" style="height: 100%">
+
+    <section id="hero" class="">
       <div class="container col-xxl-8 px-4 py-5" id="scrollspyHeading1">
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
           <div class="col-10 col-sm-8 col-lg-7 py-lg-5">
             <img
               src="./assets/img/rendisagala.jpeg"
-              class="d-block mx-lg-auto img-fluid"
+              class="d-block mx-lg-auto img-fluid mainImg"
               alt="Bootstrap Themes"
               width="700"
               height="500"
@@ -108,7 +134,7 @@
           <div class="col-lg-5">
             <h1>
               <a
-                href=""
+                href="javascript:void(0);"
                 class="typewrite"
                 data-period="100"
                 data-type='[ "Hi, I am","Rendi Anjuma","Sagala."  ]'
@@ -130,26 +156,17 @@
       </div>
     </section>
     <!-- about -->
-    <div id="about"></div>
-    <section id="about" class="" style="height: 100%">
-      <div class="container">
-        <div class="row no-gutters">
-          <div
-            class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-lg-start"
-          >
-            <img
-              src="./assets/img/rendisagala2.jpeg"
-              alt=""
-              srcset=""
-              class="img-fluid rounded-circle"
-            />
-          </div>
-          <div class="col-xl-7 ps-0 ps-lg-5 pe-lg-1 d-flex align-items-stretch">
-            <div class="content d-flex flex-column justify-content-center">
-              <h3>About Me</h3>
-              <hr />
 
-              <p>
+    <section class="section about-section py-5" id="about" style="height: 100%">
+      <div class="container">
+        <div
+          class="row align-items-center justify-content-around flex-row-reverse"
+        >
+          <div class="col-lg-6">
+            <div class="about-text">
+              <h3>About Me.</h3>
+              <hr />
+              <p class="fs-3" data-aos="zoom-in-left">
                 Hi&#128075;, i am Rendi Anjuma Sagala. Currently, i am studying
                 accounting major 4th semester in Tanjungpura University,
                 Indonesia. Beside my college major, i am interested in
@@ -158,24 +175,35 @@
                 web development. If you interested with my resume and portfolio,
                 please don't mind to reach me on contact below.
               </p>
-              <a
-                class="btn-solid-reg btn portoBtn col-lg-3"
-                href="#scrollspyHeading3"
-                >Discover More</a
-              >
-              <div class="col-md-6 d-md-flex align-items-md-stretch">
-                <div class="count-box">
-                  <i class="bi bi-journal-richtext"></i>
-                </div>
+
+              <div class="btn-bar">
+                <a
+                  class="btn-solid-reg col-lg3 btn portoBtn"
+                  href="#skills"
+                  data-aos="fade-left"
+                  data-aos-anchor="#example-anchor"
+                  data-aos-offset="500"
+                  data-aos-duration="500"
+                  >Discover More</a
+                >
               </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-5 text-center py-lg-5"
+            data-aos="fade-up"
+            data-aos-duration="5000"
+          >
+            <div class="about-img">
+              <img src="./assets/img/glasses.png" />
             </div>
           </div>
         </div>
       </div>
     </section>
+
     <!-- skills -->
-    <div id="skills"></div>
-    <section class="skills py-5" id="">
+    <section class="skills py-5" id="skills">
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
@@ -186,7 +214,7 @@
         </div>
         <div class="row">
           <div class="col-sm-6 col-lg-4">
-            <div class="feature-box-1">
+            <div class="feature-box-1" data-aos="flip-down">
               <div class="icon">
                 <i class="fab fa-html5"></i>
               </div>
@@ -201,7 +229,7 @@
           </div>
 
           <div class="col-sm-6 col-lg-4">
-            <div class="feature-box-1">
+            <div class="feature-box-1" data-aos="flip-down">
               <div class="icon">
                 <i class="fab fa-css3"></i>
               </div>
@@ -216,7 +244,7 @@
           </div>
 
           <div class="col-sm-6 col-lg-4">
-            <div class="feature-box-1">
+            <div class="feature-box-1" data-aos="flip-down">
               <div class="icon">
                 <i class="fab fa-bootstrap"></i>
               </div>
@@ -231,7 +259,7 @@
           </div>
 
           <div class="col-sm-6 col-lg-4">
-            <div class="feature-box-1">
+            <div class="feature-box-1" data-aos="flip-down">
               <div class="icon">
                 <i class="fab fa-js"></i>
               </div>
@@ -246,7 +274,7 @@
           </div>
 
           <div class="col-sm-6 col-lg-4">
-            <div class="feature-box-1">
+            <div class="feature-box-1" data-aos="flip-down">
               <div class="icon">
                 <i class="fab fa-node-js"></i>
               </div>
@@ -262,7 +290,7 @@
           </div>
 
           <div class="col-sm-6 col-lg-4">
-            <div class="feature-box-1">
+            <div class="feature-box-1" data-aos="flip-down">
               <div class="icon">
                 <i class="fas fa-book"></i>
               </div>
@@ -278,7 +306,7 @@
           </div>
 
           <div class="col-sm-6 col-lg-4">
-            <div class="feature-box-1">
+            <div class="feature-box-1" data-aos="flip-down">
               <div class="icon">
                 <i class="fas fa-database"></i>
               </div>
@@ -294,7 +322,7 @@
           </div>
 
           <div class="col-sm-6 col-lg-4">
-            <div class="feature-box-1">
+            <div class="feature-box-1" data-aos="flip-down">
               <div class="icon">
                 <i class="fab fa-git"></i>
               </div>
@@ -311,7 +339,7 @@
           </div>
 
           <div class="col-sm-6 col-lg-4">
-            <div class="feature-box-1">
+            <div class="feature-box-1" data-aos="flip-down">
               <div class="icon">
                 <i class="fab fa-figma"></i>
               </div>
@@ -329,152 +357,14 @@
       </div>
     </section>
     <!-- work -->
-    <!--  <section class="dark py-1">
-      <div class="container py-4">
-        <h1 class="h1 text-center text-light" id="pageHeaderTitle">
-          Portfolio
-        </h1>
 
-        <article class="postcard dark blue">
-          <a class="postcard__img_link" href="javascript:void(0);">
-            <img
-              class="postcard__img"
-              src="https://picsum.photos/1000/1000"
-              alt="Image Title"
-            />
-          </a>
-          <div class="postcard__text">
-            <h1 class="postcard__title blue"><a href="#">Podcast Title</a></h1>
-            <div class="postcard__subtitle small">
-              <time>
-                <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
-              </time>
-            </div>
-            <div class="postcard__bar"></div>
-            <div class="postcard__preview-txt">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
-              fugiat asperiores inventore beatae accusamus odit minima enim,
-              commodi quia, doloribus eius! Ducimus nemo accusantium maiores
-              velit corrupti tempora reiciendis molestiae repellat vero. Eveniet
-              ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum
-              dolores nobis enim quidem excepturi, illum quos!
-            </div>
-            <ul class="postcard__tagbox">
-              <li class="tag__item">
-                <i class="fab fa-github mr-2"></i>Github
-              </li>
-              <li class="tag__item"><i class="fas fa-link mr-2"></i>Demo</li>
-            </ul>
-          </div>
-        </article>
-        <article class="postcard dark red">
-          <a class="postcard__img_link" href="#">
-            <img
-              class="postcard__img"
-              src="https://picsum.photos/501/500"
-              alt="Image Title"
-            />
-          </a>
-          <div class="postcard__text">
-            <h1 class="postcard__title red"><a href="#">Podcast Title</a></h1>
-            <div class="postcard__subtitle small">
-              <time>
-                <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
-              </time>
-            </div>
-            <div class="postcard__bar"></div>
-            <div class="postcard__preview-txt">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
-              fugiat asperiores inventore beatae accusamus odit minima enim,
-              commodi quia, doloribus eius! Ducimus nemo accusantium maiores
-              velit corrupti tempora reiciendis molestiae repellat vero. Eveniet
-              ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum
-              dolores nobis enim quidem excepturi, illum quos!
-            </div>
-            <ul class="postcard__tagbox">
-              <li class="tag__item">
-                <i class="fab fa-github mr-2"></i>Github
-              </li>
-              <li class="tag__item"><i class="fas fa-link mr-2"></i>Demo</li>
-            </ul>
-          </div>
-        </article>
-        <article class="postcard dark green">
-          <a class="postcard__img_link" href="#">
-            <img
-              class="postcard__img"
-              src="https://picsum.photos/500/501"
-              alt="Image Title"
-            />
-          </a>
-          <div class="postcard__text">
-            <h1 class="postcard__title green"><a href="#">Podcast Title</a></h1>
-            <div class="postcard__subtitle small">
-              <time>
-                <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
-              </time>
-            </div>
-            <div class="postcard__bar"></div>
-            <div class="postcard__preview-txt">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
-              fugiat asperiores inventore beatae accusamus odit minima enim,
-              commodi quia, doloribus eius! Ducimus nemo accusantium maiores
-              velit corrupti tempora reiciendis molestiae repellat vero. Eveniet
-              ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum
-              dolores nobis enim quidem excepturi, illum quos!
-            </div>
-            <ul class="postcard__tagbox">
-              <li class="tag__item">
-                <i class="fab fa-github mr-2"></i>Github
-              </li>
-              <li class="tag__item"><i class="fas fa-link mr-2"></i>Demo</li>
-            </ul>
-          </div>
-        </article>
-        <article class="postcard dark yellow">
-          <a class="postcard__img_link" href="#">
-            <img
-              class="postcard__img"
-              src="https://picsum.photos/501/501"
-              alt="Image Title"
-            />
-          </a>
-          <div class="postcard__text">
-            <h1 class="postcard__title yellow">
-              <a href="#">Podcast Title</a>
-            </h1>
-            <div class="postcard__subtitle small">
-              <time>
-                <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
-              </time>
-            </div>
-            <div class="postcard__bar"></div>
-            <div class="postcard__preview-txt">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
-              fugiat asperiores inventore beatae accusamus odit minima enim,
-              commodi quia, doloribus eius! Ducimus nemo accusantium maiores
-              velit corrupti tempora reiciendis molestiae repellat vero. Eveniet
-              ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum
-              dolores nobis enim quidem excepturi, illum quos!
-            </div>
-            <ul class="postcard__tagbox">
-              <li class="tag__item">
-                <i class="fab fa-github mr-2"></i>Github
-              </li>
-              <li class="tag__item"><i class="fas fa-link mr-2"></i>Demo</li>
-            </ul>
-          </div>
-        </article>
-      </div>
-    </section> -->
-    <div id="portfolioList"></div>
-    <section class="light py-1" id="">
+    <section class="py-5 portfolioList" id="portfolioList">
       <div class="container">
         <div class="h1 text-center text-dark" id="pageHeaderTitle">
           Portfolio
         </div>
 
-        <article class="postcard light blue">
+        <article class="postcard light blue" data-aos="fade-right">
           <a class="postcard__img_link" href="javascript:void(0);">
             <img
               class="postcard__img"
@@ -503,7 +393,7 @@
             </ul>
           </div>
         </article>
-        <article class="postcard light red">
+        <article class="postcard light red" data-aos="fade-left">
           <a class="postcard__img_link" href="javascript:void(0);">
             <img
               class="postcard__img"
@@ -535,7 +425,7 @@
             </ul>
           </div>
         </article>
-        <article class="postcard light green">
+        <article class="postcard light green" data-aos="fade-right">
           <a class="postcard__img_link" href="javascript:void(0);">
             <img
               class="postcard__img"
@@ -567,7 +457,7 @@
             </ul>
           </div>
         </article>
-        <article class="postcard light yellow">
+        <article class="postcard light yellow" data-aos="fade-left">
           <a class="postcard__img_link" href="javascript:void(0);">
             <img
               class="postcard__img"
@@ -606,109 +496,112 @@
 
     <!-- contact -->
 
-    <section
-      class="contactList py-4 position-relative"
-      id="contactList"
-      style="height: 100%"
-    >
-      <div id="scrollspyHeading4"></div>
-      <div class="contact">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-5 mr-auto">
-              <h2>Contact Us</h2>
-              <hr />
-              <p class="mb-5">
-                If there are questions you want to ask or something about my
-                work, please leave a message here
+    <section class="section py-5" id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="section-title" data-aos="fade-down">
+              <h2>Get In Touch</h2>
+              <p>
+                If there are questions you want to ask, please leave a message
+                here
               </p>
-              <ul class="list-unstyled pl-md-5 mb-5">
-                <li class="d-flex text-black mb-2">
-                  <span class="mr-3"><span class="icon-map"></span></span> 34
-                  West Borneo, <br />
-                  Indonesia
-                </li>
-                <li class="d-flex text-black mb-2">
-                  <span class="mr-3"><span class="icon-phone"></span></span> +62
-                  (xxx)-(xxx)
-                </li>
-                <li class="d-flex text-black">
-                  <span class="mr-3"
-                    ><span class="icon-envelope-o"></span
-                  ></span>
-                  rendisagala19@gmail.com
-                </li>
-              </ul>
             </div>
-            <div class="col-md-7">
+          </div>
+        </div>
+        <div class="row flex-row-reverse">
+          <div class="col-md-7 col-lg-8 m-15px-tb">
+            <div class="contact-form">
               <form
-                class="mb-5"
+                action="/"
                 method="post"
-                id="contactForm"
-                name="contactForm"
-                novalidate="novalidate"
+                class="contactform contact_form"
+                id="contact_form"
               >
-                <div class="row">
-                  <div class="col-md-12 form-group">
-                    <label for="name" class="col-form-label">Name</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      name="name"
-                      id="name"
-                    />
-                  </div>
+                <div
+                  class="returnmessage valid-feedback p-15px-b"
+                  data-success="Your message has been received, We will contact you soon."
+                ></div>
+                <div class="empty_notice invalid-feedback p-15px-b">
+                  <span>Please Fill Required Fields</span>
                 </div>
                 <div class="row">
-                  <div class="col-md-12 form-group">
-                    <label for="email" class="col-form-label">Email</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      name="email"
-                      id="email"
-                    />
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input
+                        id="name"
+                        type="text"
+                        placeholder="Full Name"
+                        class="form-control"
+                      />
+                    </div>
                   </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-12 form-group">
-                    <label for="message" class="col-form-label">Message</label>
-                    <textarea
-                      class="form-control"
-                      name="message"
-                      id="message"
-                      cols="30"
-                      rows="7"
-                    ></textarea>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input
+                        id="email"
+                        type="text"
+                        placeholder="Email Address"
+                        class="form-control"
+                      />
+                    </div>
                   </div>
-                </div>
-                <div class="row">
+                  <div class="col-12">
+                    <div class="form-group">
+                      <input
+                        id="subject"
+                        type="text"
+                        placeholder="Subject"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
                   <div class="col-md-12">
-                    <input
-                      type="submit"
-                      value="Send Message"
-                      class="btn btn-primary rounded-0 py-2 px-4"
-                    />
-                    <span class="submitting"></span>
+                    <div class="form-group">
+                      <textarea
+                        id="message"
+                        placeholder="Message"
+                        class="form-control"
+                        rows="5"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="send">
+                      <a id="send_message" class="px-btn theme" href="#"
+                        ><span>Send</span> <i class="arrow"></i
+                      ></a>
+                    </div>
                   </div>
                 </div>
               </form>
-              <div id="form-message-warning mt-4"></div>
-              <div id="form-message-success">
-                <!-- Your message was sent, thank you! -->
-              </div>
+            </div>
+          </div>
+          <div class="col-md-5 col-lg-4 m-15px-tb">
+            <div class="contact-name">
+              <h5 data-aos="flip-left">Email</h5>
+              <p>rendisagala19@gmail.com</p>
+            </div>
+            <div class="contact-name">
+              <h5 data-aos="flip-left">Phone</h5>
+              <p>+62 (8**) (***) (***)</p>
+            </div>
+            <div class="contact-name">
+              <i class="fas fa-map-marker-alt fa-2x" data-aos="flip-left"></i>
+              <p>West Borneo, <br />Indonesia</p>
             </div>
           </div>
         </div>
       </div>
     </section>
+
     <!-- copyright -->
     <section
       id="copyright"
-      class="copyright mt-lg-5 bottom-0 row"
-      style="width: 100%"
+      class="copyright pt-lg-2 bottom-0 row"
+      style="padding-right: 0"
     >
-      <div class="container d-sm-flex col-lg-12">
+      <div class="container d-sm-flex col-lg-11">
         <div class="me-md-auto text-center text-md-start">
           <div class="copyright">© Copyright 2022. All Rights Reserved</div>
           <div class="credits">Web developed by @rendisagala</div>
@@ -764,7 +657,10 @@
       crossorigin="anonymous"
     ></script>
     <script src="./assets/js/typedText.js"></script>
-    <!-- Dark Mode -->
-    <script src="./assets/js/dark.js"></script>
+    <!-- AOS for animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
