@@ -30,8 +30,8 @@ function switchMode() {
     document.documentElement.setAttribute("data-theme", "dark");
     darkIcon.style.display = "none";
     lightIcon.style.display = "block";
-
     navLogo.src = "./assets/icon/rasTitle.svg";
+
     // portfolio
 
     portfolioList.classList.remove("light");
