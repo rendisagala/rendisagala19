@@ -3,7 +3,7 @@ html[data-theme="dark"] {
   --secondary-color: rgb(34 34 34);
   --font-color: rgb(229 231 235);
   --font-color2: #121212;
-  --font-color3: #00e88780;
+  --font-color3: #1566dfad;
   --nav-active: orange;
   --heading-color: #292922;
   --bg-img: url(../background/lineBackground.svg);
@@ -14,4 +14,8 @@ html[data-theme="dark"] {
   --box-shadow: rgba(63, 76, 92, 0.397);
   /* scroll color */
   --scroll-color: rgb(177, 22, 22);
+  /* copyright */
+  --copy-bg: #121212;
+  --icon-hover: orange;
+  --copy-color: white;
 }

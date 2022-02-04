@@ -11,7 +11,7 @@ const mainImg = document.querySelector(".mainImg");
 const navLogo = document.querySelector(".navLogo");
 
 if (localStorage.getItem("data-theme") == null) {
-  localStorage.setItem("data-theme", "light");
+  localStorage.setAttribute("data-theme", "light");
 }
 
 const localData = localStorage.getItem("data-theme");
