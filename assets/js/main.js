@@ -17,7 +17,6 @@ if (localStorage.getItem("data-theme") == null) {
 const localData = localStorage.getItem("data-theme");
 
 if (localData == "light") {
-  switchIcon.src = "./assets/icon/dark.svg";
   document.body.classList.remove("dark-theme");
 } else if (localData == "dark") {
   switchIcon.src = "./assets/icon/light.svg";
