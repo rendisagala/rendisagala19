@@ -11,7 +11,7 @@ const mainImg = document.querySelector(".mainImg");
 const navLogo = document.querySelector(".navLogo");
 
 if (localStorage.getItem("data-theme") == null) {
-  localStorage.setAttribute("data-theme", "light");
+  localStorage.setItem("data-theme", "light");
 }
 
 const localData = localStorage.getItem("data-theme");
@@ -19,7 +19,6 @@ const localData = localStorage.getItem("data-theme");
 if (localData == "light") {
   document.body.classList.remove("dark-theme");
 } else if (localData == "dark") {
-  switchIcon.src = "./assets/icon/light.svg";
   document.body.classList.add("dark-theme");
 }
 
@@ -62,4 +61,35 @@ function switchMode() {
       postcardText[i].classList.toggle("t-dark");
     }
   }
+}
+
+// play video portfolio
+const portfolioVideo = document.querySelectorAll(".portfolioVideo");
+
+for (let i = 0; i < portfolioVideo.length; i++) {
+  function startPreview() {
+    portfolioVideo[i].muted = true;
+    portfolioVideo[i].currentTime = 1;
+    portfolioVideo[i].playbackRate = 0.5;
+    portfolioVideo[i].play();
+  }
+
+  function stopPreview() {
+    portfolioVideo[i].currentTime = 0;
+    portfolioVideo[i].playbackRate = 1;
+    portfolioVideo[i].pause();
+  }
+
+  let previewTimeout = null;
+
+  portfolioVideo[i].addEventListener("mouseenter", () => {
+    startPreview();
+    previewTimeout = setTimeout(stopPreview, 8000);
+  });
+
+  portfolioVideo[i].addEventListener("mouseleave", () => {
+    clearTimeout(previewTimeout);
+    previewTimeout = null;
+    stopPreview();
+  });
 }

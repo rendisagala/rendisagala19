@@ -286,6 +286,12 @@ section#skills {
   text-align: center;
   font-size: 2.5rem;
 }
+/* video */
+.portfolioVideo {
+  width: 100%;
+  max-width: 32rem;
+}
+
 /* Cards */
 .postcard {
   flex-wrap: wrap;
@@ -414,7 +420,7 @@ section#skills {
     height: 130%;
     width: 55px;
   }
-  .postcard:hover .postcard__img {
+  .postcard:hover video {
     transform: scale(1.1);
     cursor: crosshair;
   }
