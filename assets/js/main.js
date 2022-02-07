@@ -93,3 +93,23 @@ for (let i = 0; i < portfolioVideo.length; i++) {
     stopPreview();
   });
 }
+
+// contact me
+// ref : https://github.com/jamiewilson/form-to-google-sheets
+
+const scriptURL =
+  "https://script.google.com/macros/s/AKfycbySc5V1yr5N9N-ScuG2vzQwE4r1KB-fCHAzUFc7Qr2yspMPxKvwnzaIAJez4pscJW4L/exec";
+const form = document.forms["web-portfolio-contact"];
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  fetch(scriptURL, { method: "POST", body: new FormData(form) })
+    .then((response) => console.log("Success!", response))
+    .catch((error) => console.error("Error!", error.message));
+});
+
+const messageDisplay = document.querySelector(".messageDisplay");
+
+function messageSent() {
+  messageDisplay.classList.remove("d-none");
+}

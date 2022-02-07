@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Web</title>
 
-    <link rel="stylesheet" href="./assets/css/style.css" id="mainStyle" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/font.css" />
     <!-- title icon -->
     <link rel="icon" href="./assets/icon/fa faR.svg" />
@@ -171,7 +171,7 @@
                 accounting major 4th semester in Tanjungpura University,
                 Indonesia. Beside my college major, i am interested in
                 technology especially programming. I started learning
-                programming since 4 months ago, and now I'm learning back end
+                programming since October 2021, and now I'm learning back end
                 web development. If you interested with my resume and portfolio,
                 please don't mind to reach me on contact below.
               </p>
@@ -359,8 +359,8 @@
         </div>
       </div>
     </section>
-    <!-- work -->
 
+    <!-- work -->
     <section class="py-5 portfolioList" id="portfolioList">
       <div class="container">
         <div class="h1 text-center text-dark" id="pageHeaderTitle">
@@ -375,7 +375,7 @@
           </a>
           <div class="postcard__text t-dark">
             <h1 class="postcard__title blue">
-              <a href="#">Whack-a-Mole</a>
+              <a href="#">Whack a Mole</a>
             </h1>
             <div class="postcard__subtitle small">
               <time>
@@ -391,14 +391,14 @@
             </div>
             <div class="techUsed">
               <ul class="techUsed__icons">
-                <li class="tag__item">
+                <li class="tag__item htmlIcon">
                   <i class="fab fa-html5" title="HTML5"></i>
                 </li>
-                <li class="tag__item">
+                <li class="tag__item cssIcon">
                   <i class="fab fa-css3-alt" title="CSS3"></i>
                 </li>
-                <li class="tag__item">
-                  <i class="fab fa-js-square" title="JavaScript"></i>
+                <li class="tag__item javascriptIcon">
+                  <i class="fab fa-js-square" title="JAVASCRIPT"></i>
                 </li>
               </ul>
             </div>
@@ -430,7 +430,9 @@
             </video>
           </a>
           <div class="postcard__text t-dark">
-            <h1 class="postcard__title red"><a href="#">Podcast Title</a></h1>
+            <h1 class="postcard__title red">
+              <a href="#">Portfolio Website</a>
+            </h1>
             <div class="postcard__subtitle small">
               <time>
                 <i class="fas fa-calendar-alt mr-2"></i>28th January 2022
@@ -440,21 +442,21 @@
             <div class="postcard__preview-txt">
               My portfolio website, like any other portfolio website, this
               website provides my professional information about me which is
-              include my resume; my work; something about me; my contact; etc
+              include my resume; my work; something about me; my contact; etc.
             </div>
             <div class="techUsed">
               <ul class="techUsed__icons">
-                <li class="tag__item">
+                <li class="tag__item htmlIcon">
                   <i class="fab fa-html5" title="HTML5"></i>
                 </li>
-                <li class="tag__item">
+                <li class="tag__item cssIcon">
                   <i class="fab fa-css3-alt" title="CSS3"></i>
                 </li>
-                <li class="tag__item">
-                  <i class="fab fa-bootstrap" title="Bootstrap5"></i>
+                <li class="tag__item bootstrapIcon">
+                  <i class="fab fa-bootstrap" title="BOOTSTRAP5"></i>
                 </li>
-                <li class="tag__item">
-                  <i class="fab fa-js-square" title="JavaScript"></i>
+                <li class="tag__item javascriptIcon">
+                  <i class="fab fa-js-square" title="JAVASCRIPT"></i>
                 </li>
               </ul>
             </div>
@@ -569,6 +571,7 @@
                 method="post"
                 class="contactform contact_form"
                 id="contact_form"
+                name="web-portfolio-contact"
               >
                 <div
                   class="returnmessage valid-feedback p-15px-b"
@@ -581,10 +584,11 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <input
-                        id="name"
+                        id="fullname"
                         type="text"
                         placeholder="Full Name"
                         class="form-control"
+                        name="fullname"
                       />
                     </div>
                   </div>
@@ -595,6 +599,7 @@
                         type="text"
                         placeholder="Email Address"
                         class="form-control"
+                        name="email"
                       />
                     </div>
                   </div>
@@ -605,6 +610,7 @@
                         type="text"
                         placeholder="Subject"
                         class="form-control"
+                        name="subject"
                       />
                     </div>
                   </div>
@@ -615,14 +621,24 @@
                         placeholder="Message"
                         class="form-control"
                         rows="5"
+                        name="message"
                       ></textarea>
                     </div>
                   </div>
                   <div class="col-md-12">
                     <div class="send">
-                      <a id="send_message" class="px-btn theme" href="#"
-                        ><span>Send</span> <i class="arrow"></i
-                      ></a>
+                      <button
+                        id="send_message"
+                        class="px-btn theme"
+                        type="submit"
+                        href="javascript:void(0);"
+                        onclick="messageSent()"
+                      >
+                        <span>Send</span> <i class="arrow"></i>
+                      </button>
+                      <span class="messageDisplay d-none"
+                        >Your message has been sent!</span
+                      >
                     </div>
                   </div>
                 </div>
@@ -693,7 +709,7 @@
                 ></a>
               </li>
               <li>
-                <a target="_blank" class="twitter" href="javascript:void(0);"
+                <a class="twitter" href="javascript:void(0);"
                   ><i class="fab fa-twitter"></i
                 ></a>
               </li>
