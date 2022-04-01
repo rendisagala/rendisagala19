@@ -399,6 +399,18 @@ section#skills {
   background: #f0db4f !important;
   color: #212529;
 }
+.tag__item.nodejsIcon:hover {
+  background: #3c873a !important;
+  color: #212529;
+}
+.tag__item.expressjsIcon:hover {
+  background: #f3f5f7 !important;
+  color: #212529;
+}
+.tag__item.mongodbIcon:hover {
+  background: #4db33d !important;
+  color: #0c4307;
+}
 
 .postcard .techUsed__icons .tag__item:hover {
   cursor: pointer;
@@ -798,7 +810,7 @@ section#contact textarea::placeholder {
 }
 
 .site-footer a {
-  color: black;
+  color: var(--copy-color);
 }
 .site-footer a:hover {
   color: #3366cc;
