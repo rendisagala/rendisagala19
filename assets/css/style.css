@@ -412,6 +412,11 @@ section#skills {
   color: #0c4307;
 }
 
+.tag__item.mysqlIcon:hover {
+  background: #3d78b3 !important;
+  color: #010600;
+}
+
 .postcard .techUsed__icons .tag__item:hover {
   cursor: pointer;
 }
